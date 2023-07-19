@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap");
+body {
+  font-family: "Chakra Petch", sans-serif;
+}
+.carousel__wrapper {
+  padding: 20px;
+}
+.carousel__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel__container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel__container::-webkit-scrollbar {
+  display: none;
+}
+.carousel__slide {
+  min-width: 90%;
+}
+.card__description {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.card__description img {
+  width: 20px;
+}
+.card__description span {
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+.card__description span.fire {
+  background-color: orange;
+}
+.card__description span.psychic {
+  background-color: rgb(146, 100, 108);
+}
+.card__description span.electric {
+  background-color: rgb(231, 210, 88);
+}
+.card__description span.rock {
+  background-color: rgb(114, 102, 32);
+}
+.card__description span.grass {
+  background-color: rgb(32, 114, 69);
+}
+
+.card__inner {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 2rem 4rem;
+}
+.card__inner h4 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: rgb(170, 155, 155);
+}
+.card__image img {
+  max-height: 150px;
+  margin-bottom: 1rem;
+}
+.arrow {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: calc(50% - 10px);
+  background-color: rgba(3, 101, 214, 0.664);
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.arrow i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.arrow.arrow--right {
+  right: 0%;
+}
+.arrow.arrow--left {
+  left: 0%;
+}
+
+@media screen and (min-width: 1180px) {
+  .carousel__wrapper {
+    padding: 50px;
+  }
+  .carousel__slide {
+    min-width: 33.33%;
+    scroll-snap-align: center;
+    position: relative;
+  }
+  .arrow {
+    display: flex;
+  }
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url(back_img.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: new time roman;
+}
+h1{
+  font-size: 40px;
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.label{
+  font-size: 19px;
+  margin-top: 20px;
+  font-weight: normal;
+}
+.form-control{
+  background: rgba(255,255,255, 0.2);
+  border: 0px;
+  border-radius: 0px;
+  border-bottom: 2px solid white;
+  font-size: 21px;
+  color: white;
+  margin-top: 20px;
+}
+
+.form-group{
+  margin-right: 25%;
+}
+.btn-info{
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 180px;
+  font-size: 19px;
+  border-radius: 1000px;
+}
+.col-md-6{
+  background: rgba(0,0,0, 0.2);
+  box-shadow: -1px 1px 60px 10px white inset;
+}
+
+.text-center{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 140px;
+  background: linear-gradient(135deg, #2f2a59, #a12c0b);
+}
+.card-size{
+  width: 200%;
+  padding-left: 100px;
+  background: transparent;
+  border: none;
+}
+.fragment {
+  font-size: 12px;
+  font-family: tahoma;
+  height: 140px;
+  border: 1px solid #ccc;
+  color: #555;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.fragment:hover {
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+
+}
+
+
+
+/* close button*/
+
+@mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: $size;
+  height: $size;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: ($size - $thickness) / 2;
+    left: 0;
+    right: 0;
+    height: $thickness;
+    background: $color;
+    border-radius: $thickness;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: block;
+  }
+
+}
+
+
+
+.btn-close {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: hsl(216, 100, 50);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 150ms;
+  
+  .icon-cross {
+    @include cross(40px, #fff, 6px);   
+  }
+  
+  &:hover,
+  &:focus {
+    transform: rotateZ(90deg);
+    background: hsl(216, 100, 40);
+  }
+
+}
+
+.cross-stand-alone {
+  @include cross(40px, #000, 4px);  
+}
+
+
+
+.cross-1px {
+  @include cross(80px, #000);  
+}
+
+
+
+
+
+
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+

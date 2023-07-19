@@ -1,0 +1,27 @@
+/* Write the css for the sponsors carousel which is in the index.html file. The carousel should be responsive. */
+/* The carousel should be responsive. */
+/* The carousel should be responsive. */
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+/* css to show the sponsors carousel in phone view */
+@media (max-width: 767px) {
+    .carousel-indicators {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

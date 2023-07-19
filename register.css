@@ -1,0 +1,58 @@
+h1{
+    font-size: 40px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.label{
+    font-size: 19px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+.form-control{
+    background:gray;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 2px solid white;
+    font-size: 21px;
+    color: white;
+    margin-top: 20px;
+}
+
+
+
+.form-group{
+    margin-right: 25%;
+}
+.btn-info{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 180px;
+    font-size: 19px;
+    border-radius: 1000px;
+}
+.col-md-6{
+    background: white;
+    box-shadow: -1px 1px 60px 10px white inset;
+}
+
+.text-center{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+.title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 140px;
+    background: linear-gradient(135deg, #2f2a59, #a12c0b);
+  }
+  .card-size{
+    width: 200%;
+    padding-left: 100px;
+    background: transparent;
+    border: none;
+  }
